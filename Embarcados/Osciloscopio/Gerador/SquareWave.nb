@@ -1,0 +1,113 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3589,        105]
+NotebookOptionsPosition[      3273,         89]
+NotebookOutlinePosition[      3619,        104]
+CellTagsIndexPosition[      3576,        101]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\[Omega]", ",", 
+     RowBox[{"Dynamic", "[", 
+      RowBox[{
+       RowBox[{"Refresh", "[", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"write", "[", 
+           RowBox[{"SquareWave", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "5"}], "}"}], ",", 
+             RowBox[{"\[Omega]", " ", "n"}]}], "]"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"n", ",", "0", ",", "2", ",", "0.1"}], "}"}]}], "]"}], 
+        "]"}], ",", 
+       RowBox[{"UpdateInterval", "\[Rule]", "0"}]}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Omega]", ",", "5", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.720814933355228*^9, 3.7208149425124445`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Omega]$$ = 5, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Omega]$$], 5, 10}}, Typeset`size$$ = {
+    758.5, {34., 14.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`\[Omega]$1228268$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Omega]$$ = 5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Omega]$$, $CellContext`\[Omega]$1228268$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> {$CellContext`\[Omega]$$, 
+        Dynamic[
+         Refresh[
+          Table[
+           $CellContext`write[
+            
+            SquareWave[{0, 
+             5}, $CellContext`\[Omega]$$ $CellContext`n]], {$CellContext`n, 0,
+             2, 0.1}]], UpdateInterval -> 0]}, 
+      "Specifications" :> {{$CellContext`\[Omega]$$, 5, 10}}, "Options" :> {},
+       "DefaultOptions" :> {}],
+     ImageSizeCache->{810., {67., 74.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7208149752257013`*^9}]
+}, Open  ]]
+},
+WindowSize->{1358, 721},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (32-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 818, 22, 47, "Input"],
+Cell[1401, 46, 1856, 40, 158, "Output"]
+}, Open  ]]
+}
+]
+*)
+

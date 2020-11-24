@@ -1,0 +1,46 @@
+predicates
+
+nondeterm pai(symbol, symbol).
+nondeterm pai(symbol).
+nondeterm cliente(symbol, integer, integer, integer, symbol).
+
+
+
+
+
+clauses
+
+pai(luciano, thales).
+pai(luciano, tatiana).
+pai(lucas, maria_laura).
+
+pai(joaquim, daniel).
+
+pai(lucas).
+pai(joaquim).
+pai (pedroca).
+pai (maria).
+
+cliente(luciano, 11111, 57, 12000, casado).
+cliente(joaquim, 00000, 30, 11000, solteiro).
+cliente(maria, 00000, 30, 15000, solteiro).
+
+goal
+
+%pai(Pai),pai(Pai,_).
+
+cliente(Cliente,_,I,S,_),S>=11000,pai(Cliente,_),I<40.
+
+
+
+
+%instancia: uma ocorrencia de uma variaável.. algo que leva a pergunta ser verdadeira. E também é uma corrência de uma declaração
+
+%biding> sucesso de um pattern matching. Quando ocorre um sucesso em uma submeta (ter dinheiro e gostar do filme são submetas. A meta é ir ao cinema)
+
+%meta (goal) é o que se desja provar
+
+%quando o binding é suceso pra meta, chamamo o mesmo de Unificação. Unificação é quando uma isntancia leva a meta ao sucesso.
+
+%backTrancking - é o "repensar". Ele busca todas as soluções possíveis para que a meta tenha sucesso.
+

@@ -1,0 +1,68 @@
+domains
+iInferior = integer.
+iSuperior = integer.
+pagante   = string.
+
+
+predicates
+nondeterm menu
+nondeterm escolheOqueFazer(integer).
+
+
+database
+pagantes(iInferior,iSuperior, pagante).
+
+
+clauses
+menu:-
+	write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"),nl,
+	write("DIGITE UM NÚMERO DO MENU À SUA ESCOLHA!"),nl,
+	write("		1- CADASTRAR PAGANTE"),nl,
+	write("		2- SORTEAR PAGANTE"),nl,
+	write("		3- RETIRAR UM PAGANTE"),nl,
+	write("		4- SAIR"),nl,
+	readint(I),
+
+	escolheOqueFazer(I).
+	
+%-----------------------------------------
+
+escolheOqueFazer(1):-
+		write("ENTRE COM UM NOME DE PAGANTE E TECLE <ENTER>"),nl,
+		write("Pagante -> "),
+		readln(Nome),
+		write("Entre com o limite inferior do intervalo e tecle <ENTER>"),nl,
+		write("iInferior"),nl,
+		readint(IInferior),nl,
+		write("Entre com o limite superior e tecle <ENTER>"),nl,
+		readint(ISuperior),nl,
+		
+		%asserta coloca o fato no topo do database, assertz coloca no final
+		asserta(pagantes(IInferior,ISuperior, Nome)),
+		
+		menu.
+
+escolheOqueFazer(2):-
+		write("DIGITOU O NÚMERO 2"),nl,
+		menu.
+
+escolheOqueFazer(3):-
+		write("ENTRE COM UM NOME A SER RETIRADO DA LISTA DE PAGANTES"),nl,
+		write("Nome - > "), 
+		readln(Nm),nl,
+		retract(pagantes(_,_,Nm)),
+		write(Nm," retirado da lista de pagantes com sucesso"),nl,
+		menu.
+
+escolheOqueFazer(4):-
+		write("VOLTE SEMPRE!\n VOCE É MUITO IMPORTANTE PARA NÓS"),nl,
+		menu.
+
+escolheOqueFazer(_):-
+		write("Escolha uma opção válida"),nl,
+		menu.
+
+
+
+goal
+menu.

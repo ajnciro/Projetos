@@ -1,0 +1,37 @@
+Esboço projetado para um motor de passo 28byj-48 acoplado a um dispenser giratório
+de ração, com o ituito de programar período de alimentação do animal.
+
+O módulo BT utilizado foi o HC-06
+
+	Antes de enviar as intruções, parear o dispositivo com o telefone.
+	A senha padrão é 1234.
+
+
+O tempo padrão do app está para 2 horas. Foi colocado também opções de alguns
+segundos para efeito de testes.
+	
+
+Ao abrir o app, clicar em "Conectar à Alimentadora". Uma lista com os dispositivos
+pareados com o telefone aparecerá, escolha o HC-06.
+	
+	Se o dispositivo for corretamente conectado, o Status do link aparecerá
+	como "Cliente conectado." Caso contrário, informações de erro aparecerão.
+	Se ocorrer o erro, basta repetir a operação de conectar. O BT leve alguns
+	segundos até estar disponível.
+
+
+Note que, quando conectar, o eixo do motor de passo começara a girar, quando estiver
+na posição desejada, pressione o botão de reset do Arduino. Após isso, fique à vontade
+para escolher o tempo de pausa do motor.
+
+
+O motor foi configurado para girar em 180 graus em sentido horário de início, e, após
+-180º sem interrupção e 180 com a pausa definida. É possível mudar isso no código fonte
+do Arduino.
+
+
+O app roda em android 2.1 ou superior.
+
+--
+Ciro
+(ciro@mail.org)

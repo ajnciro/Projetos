@@ -1,0 +1,227 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9265,        219]
+NotebookOptionsPosition[      8833,        199]
+NotebookOutlinePosition[      9179,        214]
+CellTagsIndexPosition[      9136,        211]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Dynamic", "[", 
+  RowBox[{"Refresh", "[", 
+   RowBox[{
+    RowBox[{"Grid", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Block", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"a", "=", 
+           RowBox[{"(", 
+            RowBox[{"Take", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Import", "[", 
+                RowBox[{
+                "\"\<D:\\\\Osc\\\\Capture.txt\>\"", ",", "\"\<TSV\>\""}], 
+                "]"}], "//", "Flatten"}], ",", 
+              RowBox[{"-", "190"}]}], "]"}], ")"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"fou", "=", 
+             RowBox[{"Drop", "[", 
+              RowBox[{
+               RowBox[{"Abs", "[", 
+                RowBox[{"Fourier", "[", "a", "]"}], "]"}], ",", "1"}], 
+              "]"}]}], ";", 
+            RowBox[{"ListLinePlot", "[", 
+             RowBox[{"a", ",", 
+              RowBox[{"PlotStyle", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"Blue", ",", "Thick"}], "}"}]}], ",", 
+              RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", 
+              RowBox[{"PlotRange", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"All", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "6"}], "}"}]}], "}"}]}], ",", 
+              RowBox[{"AxesLabel", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<n\>\"", ",", "Medium", ",", "Bold", ",", "Italic"}], 
+                  "]"}], ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<x[n]\>\"", ",", "Medium", ",", "Bold", ",", "Italic"}],
+                   "]"}]}], "}"}]}]}], "]"}]}], ",", 
+           RowBox[{"ListLinePlot", "[", 
+            RowBox[{"fou", ",", 
+             RowBox[{"PlotLegends", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Position", "[", 
+                 RowBox[{"fou", ",", 
+                  RowBox[{"Max", "[", "fou", "]"}]}], "]"}], "//", "First"}], 
+               "}"}]}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Red", ",", "Thick"}], "}"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Large"}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"All", ",", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "10"}], "}"}]}], "}"}]}], ",", 
+             RowBox[{"AxesLabel", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                 "\"\<\[Omega]\>\"", ",", "Medium", ",", "Bold", ",", 
+                  "Italic"}], "]"}], ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                 "\"\<|X[j\[Omega]]|\>\"", ",", "Medium", ",", "Bold", ",", 
+                  "Italic"}], "]"}]}], "}"}]}]}], "]"}]}], "}"}]}], "]"}], 
+       "}"}], ",", 
+      RowBox[{"Frame", "\[Rule]", "True"}]}], "]"}], ",", 
+    RowBox[{"UpdateInterval", "\[Rule]", "0"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.720737630901828*^9, 3.720737679035391*^9}, {
+   3.7207398617688994`*^9, 3.720739866583564*^9}, {3.72098081401221*^9, 
+   3.720980820673422*^9}, 3.720980921917599*^9, 3.7209810477006207`*^9, 
+   3.720988187893385*^9, {3.720988500283934*^9, 3.7209885087859488`*^9}}],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[
+   Refresh[
+    Grid[{
+      Block[{$CellContext`a = Take[
+          Flatten[
+           Import["D:\\Osc\\Capture.txt", "TSV"]], -190]}, {$CellContext`fou = 
+         Drop[
+           Abs[
+            Fourier[$CellContext`a]], 1]; 
+        ListLinePlot[$CellContext`a, PlotStyle -> {Blue, Thick}, ImageSize -> 
+          Large, PlotRange -> {All, {0, 6}}, AxesLabel -> {
+            Style["n", Medium, Bold, Italic], 
+            Style["x[n]", Medium, Bold, Italic]}], 
+        ListLinePlot[$CellContext`fou, PlotLegends -> {
+           First[
+            Position[$CellContext`fou, 
+             Max[$CellContext`fou]]]}, PlotStyle -> {Red, Thick}, ImageSize -> 
+         Large, PlotRange -> {All, {0, 10}}, AxesLabel -> {
+           Style["\[Omega]", Medium, Bold, Italic], 
+           Style["|X[j\[Omega]]|", Medium, Bold, Italic]}]}]}, Frame -> True],
+     UpdateInterval -> 0], StandardForm],
+  ImageSizeCache->{56., {2., 9.}}]], "Output",
+ CellChangeTimes->{3.7209882006074076`*^9, 3.7209885274279814`*^9, 
+  3.720989147607071*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(", 
+  RowBox[{"Take", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{"\"\<D:\\\\Osc\\\\Capture.txt\>\"", ",", "\"\<TSV\>\""}], "]"}],
+      "//", "Flatten"}], ",", 
+    RowBox[{"-", "240"}]}], "]"}], ")"}]], "Input",
+ CellChangeTimes->{{3.72098085391708*^9, 3.7209808955691533`*^9}, {
+  3.720980994598127*^9, 3.7209810220541754`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "305", ",", "244", ",", "484", ",", "363", ",", "326", ",", "493", ",", 
+   "487", ",", "316", ",", "500", ",", "500", ",", "302", ",", "454", ",", 
+   "455", ",", "303", ",", "282", ",", "471", ",", "309", ",", "258", ",", 
+   "488", ",", "388", ",", "323", ",", "492", ",", "491", ",", "315", ",", 
+   "500", ",", "500", ",", "310", ",", "432", ",", "461", ",", "315", ",", 
+   "253", ",", "477", ",", "315", ",", "280", ",", "487", ",", "413", ",", 
+   "327", ",", "495", ",", "500", ",", "319", ",", "500", ",", "490", ",", 
+   "318", ",", "407", ",", "462", ",", "319", ",", "248", ",", "480", ",", 
+   "321", ",", "306", ",", "488", ",", "440", ",", "333", ",", "495", ",", 
+   "500", ",", "318", ",", "500", ",", "463", ",", "319", ",", "367", ",", 
+   "465", ",", "319", ",", "245", ",", "479", ",", "330", ",", "335", ",", 
+   "491", ",", "452", ",", "330", ",", "500", ",", "500", ",", "319", ",", 
+   "484", ",", "450", ",", "321", ",", "334", ",", "468", ",", "320", ",", 
+   "249", ",", "482", ",", "352", ",", "336", ",", "488", ",", "472", ",", 
+   "329", ",", "500", ",", "500", ",", "322", ",", "468", ",", "459", ",", 
+   "322", ",", "310", ",", "470", ",", "322", ",", "253", ",", "481", ",", 
+   "374", ",", "337", ",", "491", ",", "497", ",", "330", ",", "500", ",", 
+   "500", ",", "323", ",", "449", ",", "461", ",", "325", ",", "276", ",", 
+   "474", ",", "321", ",", "265", ",", "486", ",", "402", ",", "334", ",", 
+   "494", ",", "500", ",", "327", ",", "500", ",", "500", ",", "320", ",", 
+   "428", ",", "461", ",", "320", ",", "250", ",", "473", ",", "322", ",", 
+   "292", ",", "487", ",", "419", ",", "334", ",", "495", ",", "500", ",", 
+   "323", ",", "500", ",", "477", ",", "321", ",", "391", ",", "468", ",", 
+   "320", ",", "234", ",", "477", ",", "324", ",", "311", ",", "486", ",", 
+   "449", ",", "332", ",", "497", ",", "500", ",", "319", ",", "499", ",", 
+   "454", ",", "316", ",", "356", ",", "467", ",", "320", ",", "247", ",", 
+   "482", ",", "339", ",", "337", ",", "491", ",", "456", ",", "330", ",", 
+   "500", ",", "500", ",", "319", ",", "484", ",", "455", ",", "318", ",", 
+   "325", ",", "467", ",", "318", ",", "249", ",", "482", ",", "362", ",", 
+   "336", ",", "492", ",", "481", ",", "327", ",", "500", ",", "500", ",", 
+   "320", ",", "458", ",", "454", ",", "319", ",", "293", ",", "470", ",", 
+   "317", ",", "260", ",", "483", ",", "387", ",", "333", ",", "493", ",", 
+   "500", ",", "326", ",", "500", ",", "500", ",", "317", ",", "436", ",", 
+   "460", ",", "318", ",", "259", ",", "476", ",", "317", ",", "278", ",", 
+   "486", ",", "403", ",", "334", ",", "495", ",", "500", ",", "319", ",", 
+   "500", ",", "495", ",", "319", ",", "399", ",", "463", ",", "315", ",", 
+   "246", ",", "478", ",", "318", ",", "303", ",", "488", ",", "432", ",", 
+   "329", ",", "498", ",", "500", ",", "318", ",", "500", ",", "464", ",", 
+   "316", ",", "379", ",", "466", ",", "320", ",", "244", ",", "480", ",", 
+   "331", ",", "324", ",", "489", ",", "448", ",", "327", ",", "4"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.720980924616404*^9, {3.720981014332162*^9, 3.7209810244877796`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1358, 721},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (32-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3550, 86, 158, "Input"],
+Cell[4133, 110, 1072, 24, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5242, 139, 386, 10, 47, "Input"],
+Cell[5631, 151, 3186, 45, 145, "Output"]
+}, Open  ]]
+}
+]
+*)
+
