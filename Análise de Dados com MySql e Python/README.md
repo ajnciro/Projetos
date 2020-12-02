@@ -50,7 +50,7 @@ Já o script em "fluxo_loja_toCSV_Optm.py" (o qual depende da importação de "s
 Dentro de "3_Loja_DF.ipynb" há referências a procedimentos realizados em Wolfram Mathematica (ajuste de distribuição log-normal e função racional), cujos notebooks foram exportados para PDF para fins de eventual impossibilidade na leitura dos códigos.
 
 [![Fit](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/3.png "Fit")](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/3.pnghttp:// "Fit")
-
+--
 [![Mathematica](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/4.png "Mathematica")](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/4.pnghttp:// "Mathematica")
 
 De modo geral, como conclusão sobre a análise dos dados gerados pela loja fictícia automatizada, estão as observações:
