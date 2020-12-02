@@ -43,7 +43,7 @@ A rotina em "fluxo_loja_toCSV2.py" (que depende da importação de "start_loja_d
 
 Essas duas rotinas correspondem ao notebooks Jupyter "1_Loja_DF.ipynb" e "2_Loja_DF.ipynb"
 
-[![PairPlot](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/2.png "PairPlot")](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/2.png http:// "PairPlot")
+[![PairPlot](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/2.png "PairPlot")](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/2.pnghttp:// "PairPlot")
 
 Já o script em "fluxo_loja_toCSV_Optm.py" (o qual depende da importação de "start_loja_db_Optm.py"), refere-se ao conjunto de transações na loja quando o lucro estabelecido que um produto deve obter não é constante e igual ao dos demais, mas ajustado de acordos com as otimizações vistas em "3_Loja_DF.ipynb", que, no fim, tratar-se-ia de um modelo de otimização do negócio em si.
 
