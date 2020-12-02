@@ -1,0 +1,452 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     16799,        443]
+NotebookOptionsPosition[     15464,        393]
+NotebookOutlinePosition[     16125,        419]
+CellTagsIndexPosition[     16040,        414]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "\n",
+ StyleBox["Cria uma lista dos valores cobrados pelos produtos que obtiveram m\
+\[AAcute]ximo lucro individual, isto feito para toda a faixa de lucro \
+percentual (10% a 300%)\n", "Subsubtitle"]
+}], "Subtitle",
+ CellChangeTimes->{{3.815844583079151*^9, 3.8158447292115912`*^9}, 
+   3.8158458409183846`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "dir", " ", "=", " ", 
+   "\"\<C:\\\\Users\\\\sucod\\\\OneDrive\\\\Lenovo\\\\Documentos\\\\Sql\>\""}]\
+, ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ListaValorMaxLucro", " ", "=", " ", 
+    RowBox[{"{", "0", "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", "=", "0"}], ",", 
+   RowBox[{"i", "<", "300"}], ",", 
+   RowBox[{
+    RowBox[{"i", "+=", "10"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"imp", " ", "=", " ", 
+     RowBox[{"Import", "[", 
+      RowBox[{"dir", "<>", "\"\<\\\\CSVLoja2\\\\produto_\>\"", "<>", 
+       RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\<.csv\>\""}], "]"}]}], 
+    ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"xvar", " ", "=", " ", 
+     RowBox[{"Drop", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "6", "]"}], "]"}], "&"}], "/@", "imp"}], ",", "1"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"yvar", " ", "=", " ", 
+     RowBox[{"Drop", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "9", "]"}], "]"}], "&"}], "/@", "imp"}], ",", "1"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"pos", " ", "=", " ", 
+     RowBox[{"Position", "[", 
+      RowBox[{"yvar", ",", " ", 
+       RowBox[{"Max", "[", "yvar", "]"}]}], "]"}]}], ";", " ", 
+    RowBox[{"(*", 
+     RowBox[{
+     "Retorna", " ", "a", " ", "posi\[CCedilla]\[ATilde]o", " ", "na", " ", 
+      "lista", " ", "do", " ", "maior", " ", "valor", " ", "de", " ", "Lucro",
+       " ", "Individual", " ", "acumulado"}], "*)"}], "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"ListaValorMaxLucro", " ", "=", " ", 
+     RowBox[{"Append", "[", 
+      RowBox[{"ListaValorMaxLucro", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", "i", "}"}], ",", 
+         RowBox[{"xvar", "[", 
+          RowBox[{"[", 
+           RowBox[{"Flatten", "[", "pos", "]"}], "]"}], "]"}]}], "}"}]}], 
+      "]"}]}], ";"}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ListaValorMaxLucro", " ", "=", " ", 
+   RowBox[{"Flatten", "/@", 
+    RowBox[{"Drop", "[", 
+     RowBox[{"ListaValorMaxLucro", ",", "1"}], "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8157824445261707`*^9, 3.8157824497600517`*^9}, {
+   3.8157824926735015`*^9, 3.815782494114541*^9}, {3.8157825286597643`*^9, 
+   3.8157825979241734`*^9}, {3.8157826685819836`*^9, 
+   3.8157828213973255`*^9}, {3.815782878288077*^9, 3.815782957090212*^9}, {
+   3.815782996453455*^9, 3.815783000268039*^9}, 3.8157830421657505`*^9, 
+   3.815783076118826*^9, {3.8157831648807473`*^9, 3.8157832039893303`*^9}, {
+   3.8157833075262012`*^9, 3.815783439145108*^9}, {3.8157834900321693`*^9, 
+   3.8157834930398903`*^9}, {3.815783541118976*^9, 3.815783578818711*^9}, {
+   3.815783650951057*^9, 3.8157836758495145`*^9}, {3.815783721417721*^9, 
+   3.815783726811054*^9}, {3.815783796146978*^9, 3.8157838191114354`*^9}, {
+   3.8157841164512*^9, 3.8157841917125797`*^9}, {3.8157842515629244`*^9, 
+   3.8157842654673586`*^9}, {3.815784312602895*^9, 3.8157843497909064`*^9}, {
+   3.8157845623822117`*^9, 3.8157845637012453`*^9}, {3.815784631840021*^9, 
+   3.8157846332164116`*^9}, 3.8157847053888006`*^9, {3.8157847546180663`*^9, 
+   3.8157847835507145`*^9}, {3.815784825197299*^9, 3.8157848290736322`*^9}, {
+   3.8158325671961794`*^9, 3.8158326432412796`*^9}, {3.815832762348173*^9, 
+   3.815832796051717*^9}, 3.815832838400961*^9, {3.815832890874473*^9, 
+   3.815832892081772*^9}, {3.815833379081817*^9, 3.8158334499788303`*^9}, {
+   3.815833485720048*^9, 3.815833506154992*^9}, {3.8158445792045937`*^9, 
+   3.8158445807543583`*^9}, {3.815845531612688*^9, 3.8158456374766955`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+
+
+Um ajuste para uma fun\[CCedilla]\[ATilde]o racional (Valores de Produto x \
+\[CapitalIAcute]ndice Percentual) \[EAcute] feito, e os coeficientes s\
+\[ATilde]o utilizados na equa\[CCedilla]\[ATilde]o inversa (Percentual de \
+Lucro x Valor), de modo a criar uma fun\[CCedilla]\[ATilde]o que ajusta a \
+margem de lucro percentual de acordo com o custo, recordando que, para os \
+dados obtidos, o lucro \[EAcute] diretamente proporcioal ao custo (30% maior).
+\
+\>", "Subsubtitle",
+ CellChangeTimes->{
+  3.8158447415114374`*^9, {3.8158448718331375`*^9, 3.8158449075838423`*^9}, {
+   3.8158449927768564`*^9, 3.8158451225040083`*^9}, {3.81584538483957*^9, 
+   3.8158454701337185`*^9}, {3.8158455009248333`*^9, 3.8158455039516697`*^9}, 
+   3.815845835730258*^9, {3.8158459172966967`*^9, 3.8158459185366144`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"lucro", " ", "=."}], ";", 
+   RowBox[{"Amp", " ", "=."}], ";", 
+   RowBox[{"n", "=."}], ";", 
+   RowBox[{"off", "=."}], ";", " ", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{
+     "limpa", " ", "as", " ", "vari\[AAcute]veis", " ", "eventualmente", " ", 
+      "ocupadas"}], ",", " ", 
+     RowBox[{"Aplitude", " ", "ou", " ", "Ganho"}], ",", " ", 
+     RowBox[{"Offset", " ", "e", " ", "uma", " ", "constante"}]}], "*)"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"model", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"Amp", "/", 
+      RowBox[{"(", 
+       RowBox[{"n", "+", "lucro"}], ")"}]}], "+", "off"}]}]}], "    ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Modelo", " ", "de", " ", "fun\[CCedilla]\[ATilde]o", " ", "racional"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"fit", "=", 
+  RowBox[{"FindFit", "[", 
+   RowBox[{"ListaValorMaxLucro", ",", "model", ",", 
+    RowBox[{"{", 
+     RowBox[{"Amp", ",", "off", ",", "n"}], "}"}], ",", "lucro"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"modelf", "=", 
+   RowBox[{"Function", "[", 
+    RowBox[{
+     RowBox[{"{", "lucro", "}"}], ",", 
+     RowBox[{"Evaluate", "[", 
+      RowBox[{"model", "/.", "fit"}], "]"}]}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"modelf", "[", "lucro", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"lucro", ",", "10", ",", "300"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Epilog", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"PointSize", "[", "Medium", "]"}], ",", "Red", ",", 
+      RowBox[{"Map", "[", 
+       RowBox[{"Point", ",", "list"}], "]"}]}], "}"}]}], ",", 
+   RowBox[{"PlotRange", "->", "All"}], ",", " ", 
+   RowBox[{"AxesOrigin", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0"}], "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<\[CapitalIAcute]ndice de Lucro Percentual\>\"", ",", 
+      "\"\<Valores de produto com m\[AAcute]ximo Lucro Acumulado\>\""}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.815744448418006*^9, 3.8157445176175976`*^9}, {
+   3.8157445702965083`*^9, 3.8157446229085007`*^9}, {3.8157467189311314`*^9, 
+   3.815746719376157*^9}, {3.8157474260600653`*^9, 3.8157474364114995`*^9}, {
+   3.815747472144787*^9, 3.8157475140868397`*^9}, {3.815747635697869*^9, 
+   3.815747708604767*^9}, {3.815747803641345*^9, 3.8157478247561393`*^9}, {
+   3.815748014879604*^9, 3.815748067263275*^9}, {3.8157481621865053`*^9, 
+   3.8157481849086723`*^9}, {3.8157483098968945`*^9, 
+   3.8157483152412667`*^9}, {3.815748346318328*^9, 3.8157483852794776`*^9}, {
+   3.8157851378879876`*^9, 3.815785287700514*^9}, {3.8157853586271315`*^9, 
+   3.8157854513061686`*^9}, {3.815785499840825*^9, 3.8157855145217633`*^9}, {
+   3.8157855624596477`*^9, 3.8157855918318167`*^9}, {3.815785676767931*^9, 
+   3.8157857020796604`*^9}, 3.815830932187479*^9, {3.815831357446825*^9, 
+   3.8158314013980503`*^9}, {3.8158314694449368`*^9, 3.815831472362988*^9}, {
+   3.815831545274871*^9, 3.8158315513534994`*^9}, {3.8158316544288363`*^9, 
+   3.815831695834214*^9}, {3.815831739962904*^9, 3.8158318305700006`*^9}, {
+   3.815831876491207*^9, 3.8158318924494524`*^9}, {3.8158326779654922`*^9, 
+   3.8158327058553505`*^9}, 3.8158328580948305`*^9, {3.8158456449909787`*^9, 
+   3.8158456797539215`*^9}, {3.8158457102454576`*^9, 3.8158457298074846`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["Amp", 
+   RowBox[{"lucro", "+", "n"}]], "+", "off"}]], "Output",
+ CellChangeTimes->{3.8158327198360224`*^9, 3.815832801056431*^9, 
+  3.8158328433954763`*^9, 3.8158334535310416`*^9, 3.8158335103873158`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"Amp", "\[Rule]", "5280.185208544784`"}], ",", 
+   RowBox[{"off", "\[Rule]", 
+    RowBox[{"-", "2.0763945180875756`"}]}], ",", 
+   RowBox[{"n", "\[Rule]", "100.93190581924172`"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.8158327198360224`*^9, 3.815832801056431*^9, 
+  3.8158328433954763`*^9, 3.8158334535310416`*^9, 3.8158335103873158`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Function", "[", 
+  RowBox[{
+   RowBox[{"{", "lucro", "}"}], ",", 
+   RowBox[{
+    RowBox[{"-", "2.0763945180875756`"}], "+", 
+    FractionBox["5280.185208544784`", 
+     RowBox[{"100.93190581924172`", "\[InvisibleSpace]", "+", "lucro"}]]}]}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.8158327198360224`*^9, 3.815832801056431*^9, 
+  3.8158328433954763`*^9, 3.8158334535310416`*^9, 3.8158335103873158`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJwVxX041AcAB/A76UWZytSexbwMP47kPcflfLlc5G3e5rWFI5eT3E/0FJ7i
+ZD3KS9HJS0ounWldcbOErmap1LyVSc5cyT1b4+bK45mXZdsfn+djknA4JEmD
+QqEE/Of/0zjCHgrFDKJKuvXQT2ycXHKtK7Ixw4zhSMNsFxvnyscz9WLMMJZb
+YbC5nQ1pt5m5ZZsZglPytSIlbCyatgqCUs3h0kyV/FPDxrdv+1H3kkDvYt62
+65lsXEnS6mDcpuEWfdg5xYqNweQcSVaCLVZdS60gq7xRwzkeqjXujCK69pJT
+1m5k1SfxiCsMhOXEh+afYGF+STVPawA22hzRc7nqBXVXP6OolYWFmcpDQT2e
+oKx9rHO+lI2Jues+d7U8MaBMTJoU+0IjsDwwOgBQhfioO1v90dniOFng7QFj
+NmsDsygIcwHDhVsMmVjP5YdpBgXDwWZGtPJhF0pm/VO67oVAuPhRcGaWAVfZ
+02o3izB8pzquYarBwO5Rg+LYm+EYV+XebNzohtG2Y+wQ/Qjg0w12LgxX9E2I
+H0w3RoL/dpAhTqDjXWB2hJ91NASy70+3V7ugLC9KmnshBqbmWwYvvdsJ4YrW
+8zDDfRC/NNq14LwThGfPnZWz38D2wn3/cKEzNiRb3bL4JA7yLp/n0e+dIPyK
+dc5+IA4ZZ3rDe6KcoNR/E25eGI+R1gptzpAjlNop2Ty/BIQaiNZcZTvixsTR
+gppVHHg9iJr263XAqfCRaps7HEyJByYfhjtAR22kq5uTCMFnvx9YlNsjNk2V
+qnBIQsMxsakt3x7RmxstqQtJePd6kyieao/UCIla0HEAotfMF/EX7cA6wayb
+TU9GYVm84LCbHXqftTVLnLlwCj5d7XPbFluXpbWRM1wo93QJVFRbZPZp1nDq
+D6LNY7UJL3YHCnrcF+8npoCrZedxXmKDyCvLu9bp83D8/rHivXo2GL8sUtQr
+eGA2iyqNye2wyBtKNq9KRUlu/ZitwhoFq0OW1wceQi4vrmkx3BrnJHfVXrpp
+mGzp2+r+0AocRlNv4pM02B98zO32ssLU9EnN0dLD4DhbHDK7S0OX8fC1CFo6
+3hjyZBfpNPzZsb3DpSAdz37zJq91W0L9x9+UB8p0BP24X/+1jyVerTtNl3nx
+sYZ4yXozagH/BVmWqpYPuxHT9sB0CwhzUqd6PvKR30PNdqVaoHt2zFsvmsS2
+bt/5G7UEnG42zzXHkChllV18X01AxMtuYO0j4TaqzqBXEShUbqNmxJFo1Hk1
+/PMFAj7yqM7BAyTUvVreihICzx6NOJRmkFhr4vvIJI/Ai7rnRuuLSVCG/9Lp
+TyKwO7ahr76EhHlmokw/kcAPn2fkupaRmJdXXucmEBBW6I5xy0nQnDYZrdpP
+ILIoWPioikTLjH6TWyQBeWa/9qlGEq7KIGPpXgL+jpc7DMQk5r5u2aPpS6Br
+Ni1F2kSCW0xrDNtDoI6n83jyBgkpbfu6eRaBuPgAgVcriUtPYvYz3AkMGH7h
+8EpKQnvFnVnMIOApn1bw20j4LStCJ1wJfBlxllnfToKa72FasJNAuV7sDL2D
+xEcrpfxXJwKaQ9a1A50k5HLTX2iOBI6ULu3l3iORt0P1IceewJT/04UVGYmj
+7W7BA7YE/gXP/SVC
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{
+    FormBox["\"\[CapitalIAcute]ndice de Lucro Percentual\"", TraditionalForm], 
+    FormBox[
+    "\"Valores de produto com m\[AAcute]ximo Lucro Acumulado\"", 
+     TraditionalForm]},
+  AxesOrigin->{0, 0},
+  Epilog->{
+    PointSize[Medium], 
+    RGBColor[1, 0, 0], {
+     PointBox[{10, 41.07}], 
+     PointBox[{20, 38.36}], 
+     PointBox[{30, 44.09}], 
+     PointBox[{40, 46.32}], 
+     PointBox[{50, 37.77}], 
+     PointBox[{60, 25.26}], 
+     PointBox[{70, 23.39}], 
+     PointBox[{80, 26.64}], 
+     PointBox[{90, 18.99}], 
+     PointBox[{100, 24.15}], 
+     PointBox[{110, 30.38}], 
+     PointBox[{120, 18.06}], 
+     PointBox[{130, 21.77}], 
+     PointBox[{140, 16.73}], 
+     PointBox[{150, 22.82}], 
+     PointBox[{160, 18.11}], 
+     PointBox[{170, 12.91}], 
+     PointBox[{180, 17.9}], 
+     PointBox[{190, 18.74}], 
+     PointBox[{200, 13.21}], 
+     PointBox[{210, 13.71}], 
+     PointBox[{220, 10.03}], 
+     PointBox[{230, 14.35}], 
+     PointBox[{240, 13.87}], 
+     PointBox[{250, 14.32}], 
+     PointBox[{260, 12.2}], 
+     PointBox[{270, 13.52}], 
+     PointBox[{280, 11.28}], 
+     PointBox[{290, 12.64}], 
+     PointBox[{300, 14.27}]}},
+  ImageSize->{560., Automatic},
+  PlotRange->{All, All},
+  PlotRangeClipping->True,
+  PlotRangePadding->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.8158327198360224`*^9, 3.815832801056431*^9, 
+  3.8158328433954763`*^9, 3.8158334535310416`*^9, 3.815833510402952*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+
+
+Fun\[CCedilla]\[ATilde]o que gera o lucro de acordo com o custo do produto, \
+de modo a maximizar a probabilidade de o produto entrar na regi\[ATilde]o de \
+m\[AAcute]ximo lucro individual:
+\
+\>", "Subsubtitle",
+ CellChangeTimes->{{3.8158457575818205`*^9, 3.815845848426654*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"lucro", "[", "varval_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"5280.186", "/", 
+    RowBox[{"(", 
+     RowBox[{"varval", "+", "2.076"}], ")"}]}], "-", 
+   "100.932"}]}], "\[IndentingNewLine]", 
+ RowBox[{"?", "lucro"}]}], "Input",
+ CellChangeTimes->{{3.815832950213279*^9, 3.8158329711564913`*^9}, {
+  3.815833040803013*^9, 3.8158331442623196`*^9}, {3.815833213750213*^9, 
+  3.815833230041131*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Global`lucro", "Print", "PrintUsage",
+ CellChangeTimes->{3.8158332307184706`*^9},
+ CellTags->"Info3815822430-2344796"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"lucro", "[", "varval_", "]"}], ":=", 
+         RowBox[{
+          FractionBox["5280.186`", 
+           RowBox[{"varval", "+", "2.076`"}]], "-", "100.932`"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`lucro],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.8158332307340603`*^9},
+ CellTags->"Info3815822430-2344796"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8158331586040897`*^9, 3.81583317271581*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{681, 706},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+ShowSelection->True,
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3815822430-2344796"->{
+  Cell[14279, 355, 124, 2, 42, "Print",
+   CellTags->"Info3815822430-2344796"],
+  Cell[14406, 359, 910, 25, 33, "Print",
+   CellTags->"Info3815822430-2344796"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3815822430-2344796", 15855, 406}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 328, 7, 106, "Subtitle"],
+Cell[898, 31, 3838, 82, 292, "Input"],
+Cell[CellGroupData[{
+Cell[4761, 117, 817, 15, 161, "Subsubtitle"],
+Cell[CellGroupData[{
+Cell[5603, 136, 3491, 77, 259, "Input"],
+Cell[9097, 215, 244, 5, 48, "Output"],
+Cell[9344, 222, 391, 8, 30, "Output"],
+Cell[9738, 232, 428, 10, 49, "Output"],
+Cell[10169, 244, 3289, 78, 258, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13507, 328, 291, 8, 104, "Subsubtitle"],
+Cell[CellGroupData[{
+Cell[13823, 340, 431, 11, 52, "Input"],
+Cell[CellGroupData[{
+Cell[14279, 355, 124, 2, 42, "Print",
+ CellTags->"Info3815822430-2344796"],
+Cell[14406, 359, 910, 25, 33, "Print",
+ CellTags->"Info3815822430-2344796"]
+}, Open  ]]
+}, Open  ]],
+Cell[15343, 388, 93, 1, 31, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
