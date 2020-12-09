@@ -81,13 +81,13 @@ Por lucro, neste caso, definiu-se qualquer valor final >5000, neste caso. Este l
 
 Como descrito no notebook "3_svm_plots.ipynb", apenas utilizando esse parâmetro como alvo, o objetivo da máquina não foi cumprindo, nem sequer alcançando a otimização feita pelo modelo de regressão linear anteriormente colocado. Como segue:
 
-[figura 6]
+[![SVM1](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/6.png "SVM1")](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/6.png "SVM1")
 
 Em que o triângulo vermelho representa o lucro alcançado pelas transações suportadas pela SVM, e os pontos verdes os demais das outras faixas de lucro percentual fixo.
 
 Após, observando que não necessariamente o lucro não era grande pelo volume de vendas ou pelo preço específico dos item, mas também com uma contribuição negativa dos custos da loja, implementou uma máquina que levasse em conta uma reposição mínima de estoque dado o próprio valor de item, porém com esses dois parâmetros atuando de forma disjunta. Como se nota:
 
-[figura 7]
+[![SVM2](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/7.png "SVM2")](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/7.png "SVM2")
 
 A eficiência do modelo também não foi suficiente, conseguindo também apenas lucros mediados.
 
@@ -115,7 +115,7 @@ O conjunto de dados de treino e teste foi gerado pelas transações em "fluxo_lo
 
 Todos os dados obtidos estão na pasta supramencionada, e resultado que segue:
 
-[figura 8]
+[![SVM3](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/8.png "SVM3")](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/8.png "SVM3")
 
 mostra que de fato o ajuste nos valores foi eficiente, consegue maior lucro percentual que todos os testes anteriores, e ainda sem itens com valores negativos.
 
