@@ -95,7 +95,12 @@ Uma melhor solução surgiu quando, como parâmetro alvo do aprendizado da SVM f
 
 ```python
 def max_lucro_min_aq(varcusto):
-    """" Determina o máximo lucro predefino com o mínimo custo acumulado por estoque de produto. O argumento será o custo de aquisição do produto. Como ambas as condições devem ser satisfeitas simultaneamente, pode-se começar a busca pela condição a partir do maior lucro e o mínimo custo estará contido"""
+    """" Determina o máximo lucro predefino com o mínimo 
+    custo acumulado por estoque de produto. O argumento 
+    será o custo de aquisição do produto. Como ambas as 
+    condições devem ser satisfeitas simultaneamente, 
+    pode-se começar a busca pela condição a partir do 
+    maior lucro e o mínimo custo estará contido"""
         
     x = 390
     while x>1:
