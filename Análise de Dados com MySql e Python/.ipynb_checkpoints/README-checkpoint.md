@@ -124,8 +124,6 @@ Todos os dados obtidos estão na pasta supramencionada, e resultado que segue:
 
 mostra que de fato o ajuste nos valores foi eficiente, consegue maior lucro percentual que todos os testes anteriores, e ainda sem itens com valores negativos.
 
-Naturalmente, as grandezas estatísticas geradas 
-
-A citar os valores negativos, foi possível concluir que nos dois casos mencionados anteriormente, apesar da ineficiência da máquina em atingir elevados lucros totais, ela foi bastante eficiente em conseguir que diversos produtos que teriam prejuízo não tiverem, tendo esta boa utilidade observada.
+A citar os valores negativos, foi possível concluir que nos dois casos citados anteriormente, apesar da ineficiência da máquina em atingir elevados lucros totais, ela foi bastante eficiente em conseguir que diversos produtos que teriam prejuízo não tiverem, tendo esta boa utilidade observada.
 
 Assim, com o uso de uma SVM, foi possível otimizar as transações de uma loja simples, ajustando os lucros corretos individualmente para cada produto, bem com a taxa de reposição do estoque, conseguindo a maior margem com o mínimo de custo.
