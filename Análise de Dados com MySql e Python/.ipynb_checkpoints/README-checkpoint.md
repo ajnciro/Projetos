@@ -63,7 +63,7 @@ De modo geral, como conclusão sobre a análise dos dados gerados pela loja fict
 
 - Ajustes individuais dos lucros por produto, de acordo com o preço de custo, são mais eficientes que uma mesma margem para todos os itens, para a maioria das faixas de lucro percentual observadas (para mais que 75% dos casos).
 
-[![Graph](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/5.png "Graph")](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/5.pnghttp:// "Graph")
+[![Plot](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/5.png "Plot")](https://github.com/ajnciro/Projetos/blob/main/Análise%20de%20Dados%20com%20MySql%20e%20Python/.ipynb_checkpoints/5.pnghttp:// "Plot")
 
 # Uma SVM para otimização das transações
 
