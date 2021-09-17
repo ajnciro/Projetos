@@ -1,4 +1,4 @@
-#Um robô preditor de letras
+# Um robô preditor de letras
 
 Este projeto teve como objetivo treinar um robô para jogar o clássico jogo da forca (hangman).
 
@@ -6,9 +6,9 @@ O intuito seria que adivinhasse as letras na palavra sem análise contextual, ap
 
 Outros algoritmos classificatórios se mostraram acurados, porém sem tanta eficiência dado o desenho do banco de dados.
 
-[![Class Report and Conf Matrix](add "Class Report and Conf Matrix")](http://link "Class Report and Conf Matrix")
+[![Class Report and Conf Matrix](add "Class Report and Conf Matrix")](https://github.com/ajnciro/Projetos/blob/main/Hangman/static/eficiencia_modelo.jpg?raw=true "Class Report and Conf Matrix")
 
-##Composição dos scripts
+## Composição dos scripts
 Em dois scripts principalmente pode-se encontar o funcionamento do robô, em *hangman.py* para interação em CLI:
 
 
