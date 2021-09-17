@@ -8,7 +8,6 @@ Outros algoritmos classificatórios se mostraram acurados, porém sem tanta efic
 
 [![Class Report and Conf Matrix](https://github.com/ajnciro/Projetos/blob/main/Hangman/static/eficiencia_modelo.jpg "Class Report and Conf Matrix")](https://github.com/ajnciro/Projetos/blob/main/Hangman/static/eficiencia_modelo.jpghttp:// "Class Report and Conf Matrix")
 
-[![Class Report and Conf Matrix](add "Class Report and Conf Matrix")](https://github.com/ajnciro/Projetos/blob/main/Hangman/static/eficiencia_modelo.jpg "Class Report and Conf Matrix")
 
 ## Composição dos scripts
 Em dois scripts principalmente pode-se encontar o funcionamento do robô, em *hangman.py* para interação em CLI:
