@@ -20,15 +20,15 @@ while conta_ver < 2000:
                 
         sep = " –"
         tit = f.re.split(sep, soup.title.string)[0]
-        str = f.replace_list(sp, '(?=\[).+?(?<=\])', '')
-        str = str.replace(tit,tit.upper())
-        str = str.replace(tit.upper(),f.pattern(len(tit)))
+        strin = f.replace_list(sp, '(?=\[).+?(?<=\])', '')
+        strin = strin.replace(tit,tit.upper())
+        strin = strin.replace(tit.upper(),f.pattern(len(tit)))
         
         
         if (tit.isalpha() and (tit in sp) and (tit == f.unidecode (tit)) and len(set(tit))<=10):
-            print (tit, len(tit), str)
+            print (tit, len(tit), strin)
             
-            f.data_insert('verbetes',tit, len(tit), str)
+            f.data_insert('verbetes',tit, len(tit), strin)
             
             conta_ver+=1
             print ('=== {} ==='.format(conta_ver))

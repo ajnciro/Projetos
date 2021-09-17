@@ -30,7 +30,7 @@ class Jogador:
 global bem_vindo
 bem_vindo = "Seja bem-vindo(a)!"
 
-app = Flask(__name__, static_url_path='../')
+app = Flask(__name__, static_url_path='/static')
 
 #-----------------------------------------------------------------------------
 #gera a rota para a raiz
@@ -144,7 +144,7 @@ def enviar(name):
         humano_vitoria=True
         competicao = "vitoria"
         bem_vindo = "Parabéns! Você venceu!"
-        return redirect("/portifolio")
+        return redirect("/pyfolio")
         
     elif humano.erros == 5 and bot.erros<5 or ("_" not in bot.padrao):
         bot_vitoria = True
