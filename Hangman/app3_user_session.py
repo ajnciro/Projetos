@@ -4,6 +4,8 @@ do funcionamento do jogo já estão contidas em hangman.py"""
 import funcoes as f
 from flask import Flask, render_template, request, redirect, session
 from flask_session import Session
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 class Jogador:
     def __init__(self, letras_tentadas = [], padrao = "_", erros = 0, nome = ""):
