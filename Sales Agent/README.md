@@ -31,6 +31,8 @@ O agente atua como um vendedor virtual, respondendo a mensagens enviadas pelo Wh
 3. **Agente Conversacional**: Após ter a mensagem de texto, o `app.py` envia a entrada ao agente do LangChain, passando ferramentas que permitem acesso a banco de dados, busca de produtos e manipulação do carrinho.  
 4. **Resposta ao Cliente**: O agente gera uma resposta, que é então enviada de volta ao cliente via Twilio WhatsApp.
 
+![Fluxo](fluxo.png)
+
 ## Tecnologias Utilizadas
 
 - **Python 3**  
